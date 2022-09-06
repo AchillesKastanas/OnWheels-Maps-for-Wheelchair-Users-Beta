@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "338329526902",
+    "firebase_url": "https://onwheels-maps-default-rtdb.firebaseio.com",
+    "project_id": "onwheels-maps",
+    "storage_bucket": "onwheels-maps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338329526902:android:017595b8d1ef3afb143557",
+        "android_client_info": {
+          "package_name": "com.example.onwheelsapi28android90"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "338329526902-gpu6dva5oaiuvjs0oqq91l9icpn1oiia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0neVCUAei8FjxNnqiab-VdA3a6OBeU3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "338329526902-gpu6dva5oaiuvjs0oqq91l9icpn1oiia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

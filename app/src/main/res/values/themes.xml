@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.OnWheelsAPI28Android90" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/minimalDarkPurple</item>
+        <item name="colorPrimaryVariant">@color/minimalDarkPurple</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/minimalDarkPurple</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/minimalDarkPurple</item>
+        <item name="android:navigationBarColor">@color/minimalDarkPurple</item>
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <!--add below code in themes.xml file-->
+    <!--below is the style for transparent activity and here we are using no action bar.-->
+    <style name="Theme.AppCompat.Translucent" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!--on below line we are setting background as transparent color-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--on below line we are displaying the windowNotitle as true as we are not displaying our status bar-->
+        <item name="android:windowNoTitle">true</item>
+        <!--on below line we are setting our window background as transparent color-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--on below line we are setting color background cache hint as null-->
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <!--on below line we are adding a window translucent as true-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--on below line we are adding a window animation style-->
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+</resources>

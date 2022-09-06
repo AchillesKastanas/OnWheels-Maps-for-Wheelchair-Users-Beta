@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/generalConstrain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8B89C1"
+    tools:context="UserManagementSystem.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="3000dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_tab_2"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Description">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginWithGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:drawableLeft="@drawable/google"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="googleAuthentication"
+            android:text="Log in with Google"
+            android:textColor="#8B89C1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#F2F2F2"
+            app:cornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="#8B89C1"
+            app:layout_constraintEnd_toStartOf="@+id/orTextView"
+            app:layout_constraintTop_toTopOf="@+id/orTextView" />
+
+        <TextView
+            android:id="@+id/orTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="OR"
+            android:textColor="#8B89C1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginWithGoogle" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#8B89C1"
+            app:layout_constraintStart_toEndOf="@+id/orTextView"
+            app:layout_constraintTop_toTopOf="@+id/orTextView" />
+
+        <EditText
+            android:id="@+id/chatRoomTitleEditText"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_input"
+            android:ems="10"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:text="markertester@gmail.com"
+            android:textColor="#8B89C1"
+            android:textColorHint="#8B89C1"
+            android:textSize="20sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orTextView" />
+
+        <EditText
+            android:id="@+id/passwordInputLogin"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_input"
+            android:ems="10"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Password"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:password="true"
+            android:text="123marker"
+            android:textColor="#8B89C1"
+            android:textColorHint="#8B89C1"
+            android:textSize="20sp"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatRoomTitleEditText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="goToMap"
+            android:text="Log In"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#8B89C1"
+            app:cornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgotPasswordText" />
+
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="goToPasswordResetActivity"
+            android:text="Forgot Password?"
+            android:textColor="#8B89C1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordInputLogin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Log In"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Welcome back. The OnWheels Team wishes you safe travels !"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_arrow"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="goToSplashScreen"
+        android:rotation="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="5dp"
+        android:src="@drawable/wheelchair__1_"
+        app:layout_constraintBottom_toTopOf="@+id/Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

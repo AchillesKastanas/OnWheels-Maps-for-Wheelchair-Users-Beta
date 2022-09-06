@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="CommunitySystem.CommunityActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E9E9FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/back_arrow"
+            android:onClick="goBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notificationTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#00FFFFFF"
+            android:clickable="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="CHAT ROOM OPTIONS"
+            android:textAlignment="center"
+            android:textColor="#676986"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F8F9FC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileButton"
+        tools:context="CommunitySystem.CommunityActivity">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/chatRoomOptionsContainerConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/notificationTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:background="#00FFFFFF"
+                        android:clickable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="OUR CHAT SYSTEM"
+                        android:textAlignment="center"
+                        android:textColor="#676986"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/roomTitleTextView3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="#00FFFFFF"
+                        android:clickable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="FEELING YOU DON’T BELONG IN THIS ROOM?"
+                        android:textAlignment="center"
+                        android:textColor="#676986"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/chatRoomOptionsButton" />
+
+                    <TextView
+                        android:id="@+id/roomTitleTextView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="#00FFFFFF"
+                        android:clickable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="The OnWheels Team has designed the Communuty Rooms to offer the users a place to communicate and share their opinions and experiences. Keep in mind that even though everything is moderated, offensive message might slip through. If you have found something that offends you, we kindly ask you to report it to our Admins."
+                        android:textAlignment="center"
+                        android:textColor="#676986"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/notificationTitleTextView" />
+
+                    <TextView
+                        android:id="@+id/roomTitleTextView4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="25dp"
+                        android:background="#00FFFFFF"
+                        android:clickable="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Don’t worry ! There are plenty other Communty Rooms to check out. If not, start by creating one:) Safe Travels."
+                        android:textAlignment="center"
+                        android:textColor="#676986"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/roomTitleTextView3" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/chatRoomOptionsButton"
+                        android:layout_width="0dp"
+                        android:layout_height="85dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:onClick="goToChatRoomOptions"
+                        android:text="Report Offensive  Messaging Behaviour"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:backgroundTint="#FF8787"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/roomTitleTextView2" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/chatRoomOptionsButton2"
+                        android:layout_width="0dp"
+                        android:layout_height="85dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_marginBottom="75dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:onClick="leaveChatRoom"
+                        android:text="LEAVE ROOM"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        app:backgroundTint="#8B89C1"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/roomTitleTextView4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

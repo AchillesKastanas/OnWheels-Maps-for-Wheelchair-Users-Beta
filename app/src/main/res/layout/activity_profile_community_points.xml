@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:elevation="0dp"
+    tools:context="ProfileSystem.ProfileActivity">
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/backButton"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/back_arrow"
+      android:backgroundTint="#FFFFFF"
+      android:onClick="goToProfileTab"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="520dp"
+      android:layout_marginTop="-20dp"
+      android:background="@drawable/round_tab"
+      android:backgroundTint="#8B89C1"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/whiteTabBackground"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/round_tab"
+      android:clickable="false"
+      android:stateListAnimator="@null"
+      app:elevation="2dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/backButton">
+
+    <TextView
+        android:id="@+id/fullnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="COMMUNITY POINTS"
+        android:textColor="#676986"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="You are"
+        android:textColor="#676986"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullnameTextView" />
+
+    <TextView
+        android:id="@+id/levelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="LEVEL: 0"
+        android:textColor="#676986"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/xpremainingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="0XP Remaining for Level Up"
+        android:textColor="#676986"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelTextView" />
+
+    <ProgressBar
+        android:id="@+id/xpBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:progress="30"
+        android:progressTint="#8b89c1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xpremainingTextView" />
+
+    <TextView
+        android:id="@+id/currentlevelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Level 0"
+        android:textColor="#676986"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xpBar" />
+
+    <TextView
+        android:id="@+id/nextlevelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Level 0"
+        android:textColor="#676986"
+        android:textSize="18dp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xpBar" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="20dp"
+      android:background="@drawable/round_tab"
+      android:backgroundTint="#E9E9FF"
+      android:elevation="0dp"
+      android:stateListAnimator="@null"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/whiteTabBackground">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:elevation="2sp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="NEXT LEVEL REWARD"
+        android:textColor="#676986"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/badgeHolderImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_profile_icon"
+        android:backgroundTint="@color/white"
+        android:cropToPadding="true"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:srcCompat="@drawable/rising_star" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signOutButton"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#8B89C1"
+        android:elevation="2sp"
+        android:onClick="goToCommunityPointsInfoTab"
+        android:text="COMMUNITY POINTS INFO"
+        android:textAlignment="center"
+        app:backgroundTint="#532828"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badgeHolderImageView" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/levelUpBackground2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_tab_white_stroke"
+    android:elevation="1dp"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/image"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="15dp"
+        android:elevation="2dp"
+        android:src="@drawable/celebrate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/image2"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="5dp"
+        android:elevation="2dp"
+        android:src="@drawable/pulse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/customToastXPTitlelTextView" />
+
+    <TextView
+        android:id="@+id/customToastXPTitlelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="NEW BADGE UNLOCKED"
+        android:textColor="#8B89C1"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/badgeUnlockedImager"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:elevation="3dp"
+        android:fontFamily="@font/roboto_medium"
+        android:src="@drawable/rising_star"
+        android:textColor="#8B89C1"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/customToastXPTitlelTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

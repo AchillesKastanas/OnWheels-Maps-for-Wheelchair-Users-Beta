@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="CommunitySystem.CommunityActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_tab_top"
+        android:backgroundTint="#8B89C1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/back_arrow"
+            android:backgroundTint="#FFFFFF"
+            android:onClick="goBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notificationTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#00FFFFFF"
+            android:clickable="false"
+            android:fontFamily="@font/roboto_medium"
+            android:text="COMMUNITY ROOMS"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/chatRoomTitleEditText"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_tab_white_stroke"
+            android:ems="10"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Search Rooms"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="#676986"
+            android:textColorHint="#676986"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/searchButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/searchButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_search_icon_map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chatRoomTitleEditText"
+            app:layout_constraintTop_toBottomOf="@+id/backButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#F8F9FC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileButton"
+        tools:context="CommunitySystem.CommunityActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plusButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/round_plus_button"
+            android:elevation="2dp"
+            android:onClick="goToCommunityRoomCreation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/popularInAreaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:background="#00FFFFFF"
+            android:clickable="false"
+            android:drawableEnd="@drawable/fire"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Popular in your Area"
+            android:textColor="#676986"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/joinedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="30dp"
+            android:background="#00FFFFFF"
+            android:clickable="false"
+            android:drawableEnd="@drawable/correct"
+            android:drawablePadding="5dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Joined"
+            android:textColor="#676986"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popularInAreaScrollView" />
+
+        <HorizontalScrollView
+            android:id="@+id/popularInAreaScrollView"
+            android:layout_width="409dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popularInAreaText">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/popularInAreaConstrainedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backButton3"
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="30dp"
+                        android:backgroundTint="#8B89C1"
+                        android:drawableLeft="@drawable/shopping_bags"
+                        android:paddingStart="20dp"
+                        android:text="Shopping in HnM as a Wheelchair User: My experience by @advenutespirit"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backButton12"
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:backgroundTint="#8B89C1"
+                        android:drawableLeft="@drawable/fastfood"
+                        android:paddingStart="20dp"
+                        android:text="Sweet dinner spots in Kifisia? by @advenutespirit"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/backButton3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ScrollView
+            android:id="@+id/joinedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:elevation="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/joinedText"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:id="@+id/joinedChatContainerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/joinedConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backButton3"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="#8B89C1"
+                        android:drawableLeft="@drawable/suitcases"
+                        android:paddingStart="20dp"
+                        android:text="Best wheelchair accessible Airport? by @superexplorer"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:visibility="gone"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backButton4"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="#8B89C1"
+                        android:drawableLeft="@drawable/fastfood"
+                        android:paddingStart="20dp"
+                        android:text="Looking for a Wheelchair Accessible  Fast Food place in Piraeus by @happypegion"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:visibility="gone"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/backButton3" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backButton10"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="#8B89C1"
+                        android:drawableLeft="@drawable/shopping_bags"
+                        android:paddingStart="20dp"
+                        android:text="Affordable Shopping in Peristeri by @advenutespirit"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:visibility="gone"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/backButton4" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/backButton11"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:backgroundTint="#8B89C1"
+                        android:drawableLeft="@drawable/suitcases"
+                        android:paddingStart="20dp"
+                        android:text="Public Transport in Athens is the worst... by @complainking"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:visibility="gone"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/backButton10" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

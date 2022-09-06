@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.onwheelsapi28android90">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:fitsSystemWindows="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OnWheelsAPI28Android90">
+        <activity
+            android:name="NotificationSystem.NotificationSystem"
+            android:exported="false" />
+        <activity
+            android:name=".MarkerGeneralPlacementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name=".MarkerOnUserPlacementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MarkerDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="CommunitySystem.CommunityChatRoomOptionsActivity"
+            android:exported="false" />
+        <activity
+            android:name="CommunitySystem.CommunityChatRoomActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="CommunitySystem.CommunityRoomCreationActivity"
+            android:exported="false" />
+        <activity
+            android:name="ProfileSystem.CommunityPointsInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name="ProfileSystem.ProfileSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="ProfileSystem.TravelStatisticsActivity"
+            android:exported="false" />
+        <activity
+            android:name="ProfileSystem.CommunityPointsActivity"
+            android:exported="false" />
+        <activity
+            android:name="UserManagementSystem.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="UserManagementSystem.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="AppStartupManager.SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MarkerOnMapPlacementActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+        <activity
+            android:name="ProfileSystem.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="CommunitySystem.CommunityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCJrabDPY5rgGfME2oQFtMwpqAlA-QZACQ" />
+    </application>
+
+</manifest>

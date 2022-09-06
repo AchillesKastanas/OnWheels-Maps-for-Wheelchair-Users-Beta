@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8B89C1"
+    tools:context="UserManagementSystem.LoginActivity">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <TextView
+        android:id="@+id/Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="You are about to embark on a beautiful journey."
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_arrow"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="goToSplashScreen"
+        android:rotation="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/welcome_back__1_"
+        app:layout_constraintBottom_toTopOf="@+id/Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomTab"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/login_tab_2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Description">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:scrollbars="none">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginWithGoogleButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/google"
+                        android:fontFamily="@font/roboto_medium"
+                        android:onClick="googleAuthentication"
+                        android:text="Sign Up with Google"
+                        android:textColor="#8B89C1"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#F2F2F2"
+                        app:cornerRadius="40dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="120dp"
+                        android:layout_height="1dp"
+
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="#8B89C1"
+                        app:layout_constraintEnd_toStartOf="@+id/orTextView"
+                        app:layout_constraintTop_toTopOf="@+id/orTextView" />
+
+                    <TextView
+                        android:id="@+id/orTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="OR"
+                        android:textColor="#8B89C1"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/loginWithGoogleButton" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="120dp"
+                        android:layout_height="1dp"
+
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#8B89C1"
+                        app:layout_constraintStart_toEndOf="@+id/orTextView"
+                        app:layout_constraintTop_toTopOf="@+id/orTextView" />
+
+                    <EditText
+                        android:id="@+id/chatRoomTitleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Username"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="30dp"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/orTextView" />
+
+                    <EditText
+                        android:id="@+id/passwordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Password"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="30dp"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/chatRoomTitleEditText" />
+
+                    <EditText
+                        android:id="@+id/emailInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Email"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="30dp"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/passwordInput" />
+
+                    <EditText
+                        android:id="@+id/firstnameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="First Name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="30dp"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+                    <EditText
+                        android:id="@+id/lastnameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Last Name"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="30dp"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/firstnameInput" />
+
+                    <Spinner
+                        android:id="@+id/dayInput"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Day"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="25dp"
+                        android:textAlignment="center"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toStartOf="@+id/monthInput"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lastnameInput" />
+
+                    <Spinner
+                        android:id="@+id/monthInput"
+                        android:layout_width="160dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Month"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="30dp"
+                        android:textAlignment="center"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lastnameInput" />
+
+                    <Spinner
+                        android:id="@+id/yearInput"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_input"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Year"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:textAlignment="center"
+                        android:textColor="#8B89C1"
+                        android:textColorHint="#8B89C1"
+                        android:textSize="20sp"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/monthInput"
+                        app:layout_constraintTop_toBottomOf="@+id/lastnameInput" />
+
+                    <CheckBox
+                        android:id="@+id/termsCheckBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:buttonTint="#8B89C1"
+                        android:text="I accept that my personal data will be stored and used only by the OnWheels Team."
+                        android:textColor="#8B89C1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/monthInput" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="25dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:onClick="goToMap"
+                        android:text="Sign Up"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#8B89C1"
+                        app:cornerRadius="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/termsCheckBox" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

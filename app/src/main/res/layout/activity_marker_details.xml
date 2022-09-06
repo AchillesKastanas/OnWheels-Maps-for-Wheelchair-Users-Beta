@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:elevation="1dp"
+    tools:context="ProfileSystem.ProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/round_tab"
+        android:backgroundTint="#8B89C1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="20dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_tab">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/likeButton"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_like_button"
+                    android:elevation="2sp"
+                    android:onClick="likeMarker"
+                    android:textAlignment="viewStart"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="15dp"
+                    app:layout_constraintEnd_toStartOf="@+id/dislikeButton"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/dislikeButton"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_dislike_button"
+                    android:elevation="2sp"
+                    android:onClick="dislikeMarker"
+                    android:textAlignment="viewStart"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/likeButton"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView" />
+
+                <ImageView
+                    android:id="@+id/markerImage"
+                    android:layout_width="150dp"
+                    android:layout_height="267dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:adjustViewBounds="false"
+                    android:cropToPadding="false"
+                    android:src="@drawable/tap_here"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/likeButton" />
+
+                <TextView
+                    android:id="@+id/markerTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Loading"
+                    android:textAlignment="center"
+                    android:textColor="#676986"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/usernameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Do you like this Marker?"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/markerTitleTextView" />
+
+                <TextView
+                    android:id="@+id/usernameTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Type:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/markerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/dislikeButton" />
+
+                <TextView
+                    android:id="@+id/usernameTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Notes:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/markerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/markerTypeTextView" />
+
+                <TextView
+                    android:id="@+id/usernameTextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Availability:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/markerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/markerNotesTextView" />
+
+                <TextView
+                    android:id="@+id/markerTypeTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E0DFFF"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textColor="#676986"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/markerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView2" />
+
+                <TextView
+                    android:id="@+id/markerNotesTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E0DFFF"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textColor="#676986"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/markerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView4" />
+
+                <TextView
+                    android:id="@+id/markerAvailabilityTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E2FFEA"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textAllCaps="true"
+                    android:textColor="#619C71"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/markerImage"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView6" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/fakeSpacer"
+                android:layout_width="1dp"
+                android:layout_height="5dp"
+                android:background="#00FFFFFF"
+                android:clickable="false" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_tab"
+                android:backgroundTint="#F9F9FF">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/markAvailabilityButton"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="15dp"
+                    android:backgroundTint="#8B89C1"
+                    android:elevation="2sp"
+                    android:onClick="changeMarkerAvailability"
+                    android:text="Mark as NOT AVAILABLE"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/usernameTextView14"
+                    app:layout_constraintTop_toBottomOf="@+id/markerIdTextView" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reportMarkerButton"
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="25dp"
+                    android:backgroundTint="#FF8787"
+                    android:elevation="2sp"
+                    android:onClick="signOut"
+                    android:text="Report False Marker"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/usernameTextView14"
+                    app:layout_constraintTop_toBottomOf="@+id/markAvailabilityButton" />
+
+                <TextView
+                    android:id="@+id/markerTitleTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="ADVANCED INFO"
+                    android:textColor="#676986"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/usernameTextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker ID:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/markerLikesTextView" />
+
+                <TextView
+                    android:id="@+id/usernameTextView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Availability:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/markerIdTextView" />
+
+                <TextView
+                    android:id="@+id/usernameTextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Likes:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/usernameTextView12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/markerTitleTextView2" />
+
+                <TextView
+                    android:id="@+id/usernameTextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="5dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Dislikes:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/usernameTextView3"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/usernameTextView10"
+                    app:layout_constraintTop_toBottomOf="@+id/markerTitleTextView2" />
+
+                <TextView
+                    android:id="@+id/usernameTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Marker Views:"
+                    android:textColor="#676986"
+                    android:textSize="15dp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/usernameTextView12"
+                    app:layout_constraintTop_toBottomOf="@+id/markerTitleTextView2" />
+
+                <TextView
+                    android:id="@+id/markerIdTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="45dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E0DFFF"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textAlignment="center"
+                    android:textColor="#676986"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView8" />
+
+                <TextView
+                    android:id="@+id/usernameTextView18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Feeling that this Marker is wrong? Report it to  the OnWheels Admins !"
+                    android:textColor="#676986"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toStartOf="@+id/reportMarkerButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/markAvailabilityButton" />
+
+                <TextView
+                    android:id="@+id/markerLikesTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E0DFFF"
+                    android:drawableStart="@drawable/like_25px"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textColor="#676986"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/markerDislikesTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView10" />
+
+                <TextView
+                    android:id="@+id/markerDislikesTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E0DFFF"
+                    android:drawableStart="@drawable/dislike_25px"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textColor="#676986"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/markerViewsTextView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/markerLikesTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView10" />
+
+                <TextView
+                    android:id="@+id/markerViewsTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E0DFFF"
+                    android:drawableStart="@drawable/view_25px"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textColor="#676986"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/markerDislikesTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView10" />
+
+                <TextView
+                    android:id="@+id/markerAvailabilityTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/round_tab"
+                    android:backgroundTint="#E2FFEA"
+                    android:elevation="2sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Loading"
+                    android:textAllCaps="true"
+                    android:textColor="#619C71"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTextView14" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/fakeSpacer2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="#00FFFFFF"
+                android:clickable="false" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_arrow"
+        android:onClick="goBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
