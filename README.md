@@ -1,9 +1,7 @@
 # OnWheels-Maps-for-Wheelchair-Users-Beta
-Πτυχιακή Εργασία για το Πανεπιστήμιο Πειραιά
 
-Το OnWheels σχεδιάστηκε για την διευκόλυνση των μετακινήσεων των των χρηστών αναπηρικού αμαξιδίου.
-Αξιοποιόντας τις αναπηρικές ράμπες που σημειώνει η κοινότητα της εφαρμογής μέσα στη πόλη, μπορεί ο κάθε χρήστης
-αναπηρικού αμαξίδιου να μετακινηθεί με ασφάλεια στα πεζοδρόμια της πόλης, αποφεύγοντας κάθε δυσκολία. 
+OnWheels was designed to facilitate the mobility of wheelchair users.
+Taking advantage of the wheelchair ramps noted by the Community within the city, each user can move safely on the sidewalks of the city, avoiding any obstacles.
 
-Με τη χρήση GeoHashing η εφαρμογή μπορεί να λειτουργήσει με εκατομμύρια ράμπες, χωρις να μειωθεί το performance της
-βάσης (Firebase Realtime Database) και της συσκευής
+By using GeoHashing the application can work with millions of Google Maps Pings, without reducing its Performance on the
+Database (Firebase Realtime Database) and the Device.
